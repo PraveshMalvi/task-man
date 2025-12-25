@@ -1,12 +1,19 @@
-import "./App.css";
+import { Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
+import Completed from "./pages/Completed";
+import Navbar from "./components/Navbar";
 
-function App() {
+const App = () => {
   return (
     <>
-      <Home />
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/completed" element={<Completed />} />
+      </Routes>
     </>
   );
-}
+};
 
 export default App;
