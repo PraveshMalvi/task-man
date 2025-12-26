@@ -26,10 +26,10 @@ const TaskCard: React.FC<Props> = ({
   disableEdit = false,
 }) => {
   return (
-    <div className="border rounded-md p-4 shadow-sm bg-white">
+    <div className="border rounded-md p-2.5 shadow-sm bg-white">
       <div className="flex justify-between items-start">
         <div>
-          <h3 className="text-lg font-semibold">{task.title}</h3>
+          <p className="text-lg font-semibold">{task.title}</p>
           <p className="text-sm text-gray-600">{task.description}</p>
         </div>
         <div className="text-right">
