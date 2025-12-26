@@ -15,7 +15,7 @@ const Completed = () => {
   }
 
   return (
-    <div className="container py-4">
+    <div className="container pt-20 pb-4">
       <h2 className="mb-3">Completed Tasks</h2>
       <TaskList
         tasks={tasks}

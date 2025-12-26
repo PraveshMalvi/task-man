@@ -5,25 +5,25 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleToggle = () => setIsOpen(!isOpen);
   return (
-    <nav className="navbar navbar-expand-lg bg-gray-100">
+    <nav className="navbar navbar-expand-lg bg-gray-700 fixed-top">
       <div className="container-fluid sm:px-10">
-        <NavLink className="navbar-brand font-bold" to="/">
-          Task Man
+        <NavLink className="navbar-brand font-extrabold text-white" to="/">
+          TaskMan.
         </NavLink>
         <div
           onClick={handleToggle}
           className="flex flex-col gap-1 ms-auto cursor-pointer sm:hidden relative"
         >
           <div
-            className={`w-8 h-1 bg-gray-500 rounded ${
+            className={`w-8 h-1 bg-gray-300 rounded ${
               isOpen
                 ? "rotate-45 duration-500 absolute top-0 "
                 : "rotate-0 duration-500"
             }`}
           ></div>
-          {!isOpen && <div className="w-8 h-1 bg-gray-500 rounded"></div>}
+          {!isOpen && <div className="w-8 h-1 bg-gray-300 rounded"></div>}
           <div
-            className={`w-8 h-1 bg-gray-500 rounded ${
+            className={`w-8 h-1 bg-gray-300 rounded ${
               isOpen ? "-rotate-45 duration-500" : "rotate-0 duration-500"
             }`}
           ></div>
@@ -49,12 +49,12 @@ const Navbar = () => {
           )}
         </div>
         <ul className="sm:flex hidden flex-row gap-4 ms-auto mb-2 mb-lg-0 ">
-          <li className="nav-item hover:text-gray-400">
-            <NavLink className="nav-link active " to="/">
+          <li className="nav-item text-white/90 hover:text-gray-400">
+            <NavLink className="nav-link" to="/">
               All Tasks
             </NavLink>
           </li>
-          <li className="nav-item hover:text-gray-400">
+          <li className="nav-item text-white/90 hover:text-gray-400">
             <NavLink className="nav-link" to="/completed">
               Completed
             </NavLink>

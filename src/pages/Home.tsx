@@ -64,9 +64,9 @@ const Home: React.FC = () => {
   }
 
   return (
-    <div className="container py-4">
+    <div className="container pt-20 pb-4">
       <div className="d-flex justify-content-between align-items-center mb-4">
-        <h2>Task Dashboard</h2>
+        <h3>Task Dashboard</h3>
         <div>
           <button className="btn btn-primary" onClick={openAdd}>
             + Add Task
@@ -76,19 +76,19 @@ const Home: React.FC = () => {
 
       <div className="row gap-3 gap-sm-0 mb-4">
         <div className="col-md-4">
-          <div className="card p-3">
+          <div className="rounded p-3 bg-red-100 text-red-800">
             <h6>Pending</h6>
             <div className="fs-4">{counts["Pending"] || 0}</div>
           </div>
         </div>
         <div className="col-md-4">
-          <div className="card p-3">
+          <div className="rounded p-3 bg-yellow-100 text-yellow-800">
             <h6>In Progress</h6>
             <div className="fs-4">{counts["In Progress"] || 0}</div>
           </div>
         </div>
         <div className="col-md-4">
-          <div className="card p-3">
+          <div className="rounded p-3 bg-green-100 text-green-800">
             <h6>Completed</h6>
             <div className="fs-4">{counts["Completed"] || 0}</div>
           </div>
@@ -107,7 +107,7 @@ const Home: React.FC = () => {
       {showModal && (
         <>
           <div className="modal show d-block" tabIndex={-1}>
-            <div className="modal-dialog">
+            <div className="modal-dialog modal-dialog-centered">
               <div className="modal-content">
                 <div className="modal-header">
                   <h5 className="modal-title">
